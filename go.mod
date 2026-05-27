@@ -6,7 +6,7 @@ require (
 	github.com/cosi-project/runtime v0.10.2
 	github.com/hashicorp/terraform-plugin-framework v1.12.0
 	github.com/hashicorp/terraform-plugin-go v0.24.0
-	github.com/hashicorp/terraform-plugin-log v0.9.0
+	github.com/hashicorp/terraform-plugin-log v0.10.0
 	github.com/hashicorp/terraform-plugin-testing v1.10.0
 	github.com/siderolabs/omni/client v0.48.3
 	gopkg.in/yaml.v3 v3.0.1
