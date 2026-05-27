@@ -1,0 +1,27 @@
+{
+  "name": "terraform-provider-omni",
+  "image": "mcr.microsoft.com/devcontainers/go:2-1.26-bookworm",
+  "updateRemoteUserUID": false,
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "updateContentCommand": "go mod download && (cd tools && go mod download)",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "hashicorp.terraform"
+      ],
+      "settings": {
+        "go.toolsManagement.autoUpdate": false,
+        "go.useLanguageServer": true,
+        "go.lintTool": "golangci-lint",
+        "go.lintOnSave": "package",
+        "editor.formatOnSave": true,
+        "[go]": {
+          "editor.defaultFormatter": "golang.go",
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

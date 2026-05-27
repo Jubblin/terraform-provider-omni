@@ -1,11 +1,11 @@
 NAME=omni
 VERSION=0.1.8
+BINARY=bin/terraform-provider-$(NAME)
 OS_ARCH=$(shell go version | cut -d' ' -f 4 | sed -e 's/\//_/')
 ifeq ($(OS_ARCH),windows_amd64)
-	BINARY=terraform-provider-$(NAME).exe
+	BINARY=$(BINARY).exe
 	TF_PLUGIN_DIR=${APPDATA}/terraform.d
 else
-	BINARY=terraform-provider-$(NAME)
 	TF_PLUGIN_DIR=~/.terraform.d
 endif
 
